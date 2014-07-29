@@ -36,4 +36,34 @@ test('COUNT, AGV and SUM grouped by name', function() {
 });
 
 
+test('COUNT, AGV and SUM', function () {
+     var res = _.aggregate(data, {"count": "field", "sum":"field", "avg":"field"});
+     equal(res.count_field,5);
+     equal(res.avg_field,3);
+     equal(res.sum_field,15);
+});
+
+
 ~~~
+
+
+## aggregate(data, fields, context)
+
+### data : array
+
+### fields : object {aggregate_function: fields, ...}
+
+* aggregate_function : sum, avg, count (also possible in upper case)
+* fields : string | function | array
+
+
+## aggregateBy(data, group_property, fields, context)
+
+### data : array
+
+### group_property: string | function
+
+### fields : object {aggregate_function: fields, ...}
+
+* aggregate_function : sum, avg, count (also possible in upper case)
+* fields : string | function | array
