@@ -3,7 +3,23 @@
 ## SYNOPSIS
 
 ~~~
-var data = [{name:"a", field:1},{name:"a", field:2},{name:"a", field:3},{name:"b", field:4},{name:"b", field:5}]
+var data = [ {
+	name : "a",
+	field : 1
+}, {
+	name : "a",
+	field : 2
+}, {
+	name : "a",
+	field : 3
+}, {
+	name : "b",
+	field : 4
+}, {
+	name : "b",
+	field : 5
+} ];
+
 
 test('COUNT, AGV and SUM grouped by name', function() {
 	var res = _.aggregateBy(data, "name", {
