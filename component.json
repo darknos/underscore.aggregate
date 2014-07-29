@@ -1,0 +1,5 @@
+{
+  "name": "underscore.aggregate",
+  "version": "0.2.0",
+  "main": "./dist/underscore.aggregate.min.js"
+}
